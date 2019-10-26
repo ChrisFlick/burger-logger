@@ -1,21 +1,30 @@
 <div class="wrapper">
     <h1 class="jumbotron text-each">Burgers!</h1>
     <div class='row'>
-        
+
         <div class="col-md-5">
             Burgers:
 
             <ul>
-            {{#unless eaten}}
-                <li>{{burger_name}}<button class="devour">Devour!</button></li><br>
-            {{/unless}}
+                {{#each burgers}}
+                    {{#unless devoured}}
+                        <li>{{burger_name}}<button class="devour">Devour!</button></li><br>
+                    {{/unless}}
+                {{/each}}
             </ul>
         </div>
         <div class="col-md-5">
             Eaten burgers:
+
+            {{#each burgers}}
+                {{#if devoured}}
+                    <li>{{burger_name}} 
+                {{/if}}
+            {{/each}}
         </div>
     </div>
     <form id="new burger">
+        <label>Add a burger?</label>
         <textarea class="" id="burger"></textarea>
         <input type="submit">
     </form>
