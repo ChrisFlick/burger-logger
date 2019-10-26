@@ -1,0 +1,1 @@
+This app allows you to add burgers to a database and then update them by "Devouring" them. This showcases ability to make a full-stack application.
