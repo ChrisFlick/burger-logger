@@ -8,6 +8,7 @@ module.exports = function (app) {
     })
 
     app.post("/api/burgers/", function(req, res) {
+        console.log(`Adding ${req.body.name}`)
         orm.insertOne(req.body.name)
         res.end();
     })

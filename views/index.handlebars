@@ -8,7 +8,7 @@
             <ul>
                 {{#each burgers}}
                     {{#unless devoured}}
-                        <li>{{burger_name}}<button class="devour">Devour!</button></li><br>
+                        <li>{{burger_name}}<button  class="devour" id={{id}}>Devour!</button></li><br>
                     {{/unless}}
                 {{/each}}
             </ul>
@@ -23,7 +23,7 @@
             {{/each}}
         </div>
     </div>
-    <form id="new burger">
+    <form id="new_burger">
         <label>Add a burger?</label>
         <textarea class="" id="burger"></textarea>
         <input type="submit">
